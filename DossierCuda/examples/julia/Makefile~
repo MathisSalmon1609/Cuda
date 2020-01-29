@@ -1,0 +1,4 @@
+CXXFLAGS=-O3 -march=native
+LDLIBS=`pkg-config --libs opencv`
+
+julia: julia.cpp

@@ -1,0 +1,23 @@
+#include <iostream>
+
+
+
+__global__ void simple(){}
+
+
+__global__ void fill(int * v , std::size_t size){
+
+	auto id = threadIdx.x;
+	v[ id ] = id;
+}
+
+
+
+int main(){
+
+	int *  tab = nullptr;
+	std::size_t size =10;
+	simple <
+	fill <<< 1 , 2 >>>(&tab , size);
+	return 0;
+}
